@@ -1,8 +1,10 @@
-function maximumNumber(num1, num2, num3) {
-  return num1 > num2 && num1 > num3
-    ? num1
-    : num2 > num1 && num2 > num3
-    ? num2
-    : num3;
+function maximumNumber(numbers) {
+  var maxNum = 0;
+
+  for (let i = 0; i < numbers.length; i++) {
+    while (numbers[i] > maxNum) {
+      maxNum = numbers[i];
+    }
+  }
+  return maxNum;
 }
-console.log(maximumNumber( 23, 1, 78))
