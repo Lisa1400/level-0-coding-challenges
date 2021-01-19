@@ -1,5 +1,5 @@
 function maximumNumber(numbers) {
-  let maxNum = 0;
+  let maxNum = numbers[0];
 
   for (let i = 0; i < numbers.length; i++) {
     if (numbers[i] > maxNum) {
@@ -8,3 +8,4 @@ function maximumNumber(numbers) {
   }
   return maxNum;
 }
+
