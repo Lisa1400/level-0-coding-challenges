@@ -1,13 +1,15 @@
 function timeConversion(number) {
-  var hours = Math.floor(number / 60);
-  var mins = number % 60;
+  let hours = Math.floor(number / 60);
+  let mins = number % 60;
 
-  if (hours == 1) {
+  if (hours == 1 && mins == 1) {
+    return `${hours} hour, ${mins} minute`;
+  } else if (hours == 1 && mins > 1) {
     return `${hours} hour, ${mins} minutes`;
-  } else if (mins == 1) {
+  } else if (hours > 1 && mins == 1) {
     return `${hours} hours, ${mins} minute`;
   } else {
     return `${hours} hours, ${mins} minutes`;
   }
 }
-console.log(timeConversion(62));
+console.log(timeConversion(127));
